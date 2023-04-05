@@ -1,6 +1,6 @@
 ---
 icon: edit
-title: lol_showmaker
+title: lol_pro_player
 date: 2023-04-05
 category:
   - lol_interview
@@ -8,6 +8,7 @@ tag:
   - lol
   - showmaker
   - life
+  - interview
 ---
 
 # lol_showmaker

@@ -6,7 +6,7 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "laike",
+    name: "viper3",
     url: "https://mrhope.site",
   },
 
@@ -67,7 +67,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一个前端开发者",
+        description: "一只开发",
         intro: "/zh/intro.html",
       },
 

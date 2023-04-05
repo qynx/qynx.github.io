@@ -8,12 +8,12 @@ export default defineUserConfig({
     "/": {
       lang: "en-US",
       title: "Blog Demo",
-      description: "A blog demo for vuepress-theme-hope",
+      description: "viper3's blog",
     },
     "/zh/": {
       lang: "zh-CN",
-      title: "open-blog",
-      description: "vuepress-theme-hope 的博客演示",
+      title: "viper3's blog",
+      description: "viper3's blog",
     },
   },
 

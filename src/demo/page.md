@@ -4,7 +4,7 @@ title: Page Config
 # This is the icon of the page
 icon: page
 # This control sidebar order
-order: 1
+# order: 1
 # Set author
 author: Ms.Hope
 # Set writing time
@@ -17,7 +17,7 @@ tag:
   - Page config
   - Guide
 # this page is sticky in article list
-sticky: true
+# sticky: true
 # this page will appear in starred articles
 star: true
 # You can customize footer content

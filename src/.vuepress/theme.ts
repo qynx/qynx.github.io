@@ -6,7 +6,7 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "viper3",
+    name: "Viper3",
     url: "https://mrhope.site",
   },
 
@@ -33,6 +33,27 @@ export default hopeTheme({
   locales: {
     "/": {
       // navbar
+      navbar: zhNavbar,
+
+      // sidebar
+      sidebar: zhSidebar,
+
+      footer: "默认页脚",
+
+      displayFooter: true,
+
+      blog: {
+        description: "一只开发",
+        intro: "/zh/intro.html",
+      },
+
+      // page meta
+      metaLocales: {
+        editLink: "在 GitHub 上编辑此页",
+      },
+    },
+    "/en/": {
+      // navbar
       navbar: enNavbar,
 
       // sidebar
@@ -44,7 +65,7 @@ export default hopeTheme({
 
       blog: {
         description: "A FrontEnd programmer",
-        intro: "/intro.html",
+        intro: "/en/intro.html",
       },
 
       metaLocales: {

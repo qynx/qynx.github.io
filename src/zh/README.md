@@ -2,9 +2,9 @@
 home: true
 layout: Blog
 icon: home
-title: open-blog
+title: viper3's blog
 heroImage: /logo.svg
-heroText: 少小须勤学, 文章可立身
+heroText: viper3's blog
 heroFullScreen: true
 tagline: 
 projects:

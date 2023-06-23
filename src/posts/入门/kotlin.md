@@ -78,3 +78,24 @@ a?.apply {
 // a为null时默认值
 a?:false
 ```
+
+## 协程
+
+### CompletableFuture 转 协程
+
+前置依赖
+
+```groovy
+implementation'org.jetbrains.kotlinx:kotlinx-coroutines-jdk8'
+```
+
+直接调用 await 方法
+```java
+CompletableFuture.supplyAsync {
+                    try {
+                        Thread.sleep(2000)
+                    } catch (ex: Exception) {
+                        ex.printStackTrace()
+                    }
+                }.await()
+```

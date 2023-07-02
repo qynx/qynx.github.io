@@ -99,3 +99,15 @@ CompletableFuture.supplyAsync {
                     }
                 }.await()
 ```
+
+## class 
+
+### 静态成员
+
+```java
+class A {
+    companion object {
+        val b = "com/"
+    }
+}
+```

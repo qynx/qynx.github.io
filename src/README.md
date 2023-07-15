@@ -9,9 +9,9 @@ heroFullScreen: true
 tagline: 
 projects:
   - icon: project
-    name: 项目名称
-    desc: 项目详细描述
-    link: https://你的项目链接
+    name: 博客主题文档
+    desc: vuepress-hope
+    link: https://theme-hope.vuejs.press/
 
   - icon: link
     name: 链接名称

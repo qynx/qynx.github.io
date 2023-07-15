@@ -9,39 +9,30 @@ export const zhNavbar = navbar([
     prefix: "/posts/",
     children: [
       {
-        text: "苹果",
+        text: "诗词",
         icon: "edit",
-        prefix: "apple/",
+        prefix: "诗词/",
         children: [
-          { text: "苹果1", icon: "edit", link: "1" },
-          { text: "苹果2", icon: "edit", link: "2" },
-          "3",
-          "4",
+          { text: "神童诗", icon: "edit", link: "神童诗" },
+          { text: "秦王扫..", icon: "edit", link: "秦王扫六合" },
         ],
       },
       {
-        text: "香蕉",
+        text: "博客",
         icon: "edit",
-        prefix: "banana/",
+        prefix: "博客/",
         children: [
           {
-            text: "香蕉 1",
+            text: "aes",
             icon: "edit",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "edit",
-            link: "2",
-          },
-          "3",
-          "4",
+            link: "java_aes",
+          }
         ],
       },
-      { text: "樱桃", icon: "edit", link: "cherry" },
-      { text: "火龙果", icon: "edit", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
+      //{ text: "樱桃", icon: "edit", link: "cherry" },
+      //{ text: "火龙果", icon: "edit", link: "dragonfruit" },
+      //"tomato",
+      //"strawberry",
     ],
   },
   {

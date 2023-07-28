@@ -1,7 +1,16 @@
-
+---
+icon: blog
+date: 2023-07-09
+category:
+  - 入门
+tag:
+  - brew
+---
 
 
 # brew
+
+<!-- more -->
 
 ## 代理设置
 

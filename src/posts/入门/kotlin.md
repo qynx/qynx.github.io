@@ -1,5 +1,5 @@
 ---
-icon: edit
+icon: blog
 date: 2023-06-22
 category:
   - 入门

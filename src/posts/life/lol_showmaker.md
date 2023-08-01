@@ -1,5 +1,5 @@
 ---
-icon: edit
+icon: profile
 title: lol_pro_player
 date: 2023-04-05
 category:

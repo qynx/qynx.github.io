@@ -1,0 +1,1 @@
+import{_ as a,W as t,X as r,a0 as c,Y as e,Z as o}from"./framework-3ac60b7d.js";const _={},s=e("h1",{id:"滕王阁序",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#滕王阁序","aria-hidden":"true"},"#"),o(" 滕王阁序")],-1);function n(d,i){return t(),r("div",null,[s,c(" more ")])}const h=a(_,[["render",n],["__file","滕王阁序.html.vue"]]);export{h as default};

@@ -1,1 +1,0 @@
-import{_ as a,W as t,X as r,a0 as c,Y as e,Z as o}from"./framework-3ac60b7d.js";const s={},n=e("h1",{id:"晏殊",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#晏殊","aria-hidden":"true"},"#"),o(" 晏殊")],-1);function _(d,i){return t(),r("div",null,[n,c(" more ")])}const h=a(s,[["render",_],["__file","晏殊.html.vue"]]);export{h as default};

@@ -27,7 +27,7 @@ fun fillKey(key: String): ByteArray {
 
 ```
 
-基于hutool封装的工具类 
+基于[hutool](https://hutool.cn/docs/#/)封装的工具类 
 
 
 ```java

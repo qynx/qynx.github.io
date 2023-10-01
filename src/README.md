@@ -4,7 +4,7 @@ layout: Blog
 icon: home
 title: viper3's blog
 heroImage: /logo.svg
-heroText: viper3's blog
+heroText: 尽吾志也而不能至者，可以无悔矣，其孰能讥之乎？
 heroFullScreen: true
 tagline: 
 projects:

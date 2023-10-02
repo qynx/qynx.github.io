@@ -1,0 +1,1 @@
+import{aL as t,Q as a,S as o,U as e,ac as c}from"./framework-f6bde8f8.js";const n={},r=e("h1",{id:"介绍页",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#介绍页","aria-hidden":"true"},"#"),c(" 介绍页")],-1),s=e("p",null,"我的我的",-1),_=[r,s];function d(i,l){return a(),o("div",null,_)}const f=t(n,[["render",d],["__file","intro.html.vue"]]);export{f as default};

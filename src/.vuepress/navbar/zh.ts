@@ -13,8 +13,8 @@ export const zhNavbar = navbar([
         icon: "edit",
         prefix: "诗词/",
         children: [
-          { text: "神童诗", icon: "edit", link: "神童诗" },
-          { text: "秦王扫..", icon: "edit", link: "秦王扫六合" },
+          { text: "相见欢-李煜", icon: "alias", link: "相见欢_林花谢了春红" },
+          { text: "锦瑟-李商隐", icon: "alias", link: "锦瑟" },
         ],
       },
       {

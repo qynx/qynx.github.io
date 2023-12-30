@@ -157,12 +157,11 @@ export default hopeTheme({
       katex: true,
       mark: true,
       mermaid: true,
+      tasklist: true,
       playground: {
         presets: ["ts", "vue"],
       },
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
+      revealJs: true,
       stylize: [
         {
           matcher: "Recommended",

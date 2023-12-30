@@ -12,8 +12,15 @@ tag:
   - 电竞人物志
 ---
 
-# lol_showmaker
+# lol_pro_player
+
+<!-- more -->
 
 ## showmaker
 
 <BiliBili bvid="BV14g41187ZE" />
+
+## faker 
+
+
+<BiliBili bvid="BV1MN4y1x7da" />

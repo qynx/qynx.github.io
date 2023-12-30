@@ -4,7 +4,7 @@ layout: Blog
 icon: home
 title: viper3's blog
 heroImage: /logo.svg
-heroText: 悟已往之不谏 知来者之可追
+heroText: 向来枉费推移力 此日中流自在行
 heroFullScreen: true
 tagline: 
 projects:

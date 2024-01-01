@@ -180,6 +180,7 @@ export default hopeTheme({
       tabs: true,
       vPre: true,
       vuePlayground: true,
+      kotlinPlayground: true,
     },
 
     pwa: {

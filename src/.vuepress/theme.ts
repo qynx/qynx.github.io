@@ -39,7 +39,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      footer: "",
 
       displayFooter: true,
 

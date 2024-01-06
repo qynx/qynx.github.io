@@ -61,3 +61,7 @@ deque.push(2);
 ```java
 deque.pop()
 ```
+
+### 1.3 demo
+
+<iframe src="https://pl.kotl.in/z6KeB8t3P" height='220' width='600'></iframe>

@@ -31,7 +31,7 @@ tag:
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 ```
 
-## 解法1
+## 解法1 (2023/10)
 
 用map记录字符是否出现过  若是回去遍历上次出现位置
 
@@ -78,7 +78,30 @@ public class leetcode_3 {
 }
 ```
 
-## 优化方法
+## 解法2 (2024/01)
 
-char 数组记录元素上次出现位置
-同时记录当前窗口起始位置
+```java
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+      if (s.length() == 0) {
+            return 0;
+        }
+
+        Map<Character, Integer> posMap = new HashMap<>();
+        int start = 0, end = 0, res = 1;
+        posMap.put(s.charAt(0), 0);
+        for (int i = 1; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            Integer lastPos = posMap.get(ch);
+            if (lastPos != null && lastPos >= start) {
+                start = lastPos + 1;
+            }
+            end = i;
+            res = Math.max(res, end-start+1);
+            
+            posMap.put(ch, i);
+        }
+        return res;
+    }
+}
+```

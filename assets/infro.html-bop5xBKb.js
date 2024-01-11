@@ -1,0 +1,1 @@
+import{_ as t,o,c as r,a as e,b as a}from"./app-4Pi6fCSs.js";const s={},c=e("h1",{id:"to-be-supported",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#to-be-supported","aria-hidden":"true"},"#"),a(" to be supported...")],-1),n=[c];function d(_,i){return o(),r("div",null,n)}const h=t(s,[["render",d],["__file","infro.html.vue"]]);export{h as default};

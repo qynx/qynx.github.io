@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "iconfont",
 
-  logo: "/logo.svg",
+  logo: "/avatar.jpg",
 
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 

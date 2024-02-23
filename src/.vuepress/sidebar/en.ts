@@ -15,8 +15,6 @@ export const enSidebar = sidebar({
       icon: "note",
       prefix: "posts/",
       children: "structure",
-    },
-    "intro",
-    "slides",
+    }
   ],
 });

@@ -14,8 +14,10 @@ sticky: true
 
 [yuque](https://www.yuque.com/g/spring-ksba2/ttvy2z/lbq8o8uf12hy800r/collaborator/join?token=9DlyNs8bK8KECL1z&source=doc_collaborator# )
 
-- [ ] 望海潮 东南形胜
+- [x] 望海潮 东南形胜
 
-- [ ] 桂枝香 金陵怀古
+- [x] 桂枝香 金陵怀古
 
-- [ ] 江城子 密州出猎
+- [x] 醉花阴 薄雾浓云愁永昼
+ 
+- [x] 江城子 密州出猎

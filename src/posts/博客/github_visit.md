@@ -9,7 +9,7 @@ tag:
   - java
 ---
 
-# ithub 访问问题
+# github 访问问题
 
 <!-- more -->
 

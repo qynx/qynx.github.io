@@ -28,3 +28,11 @@ tag:
 
 当前oracle还没有给出解决方案, idea给了临时解决办法, （==只能降低发生频率，不能彻底避免==）, 可以下载临时打包的java Runtime更换为idea的RootRuntime, 详见链接[https://youtrack.jetbrains.com/issue/JBR-6802/Crash-EXCBADINSTRUCTION-from-ObjectMonitorTrySpin-on-macOS-14.4#focus=Change-27-9471539.0-0%3FcontinueFlag=27b51d2bf0e9b9bc938a9a8ac14d3b9c](https://youtrack.jetbrains.com/issue/JBR-6802/Crash-EXCBADINSTRUCTION-from-ObjectMonitorTrySpin-on-macOS-14.4#focus=Change-27-9471539.0-0%3FcontinueFlag=27b51d2bf0e9b9bc938a9a8ac14d3b9c)
 
+
+## 2023-03-24
+
+idea发布修复版本 [https://blog.jetbrains.com/idea/2024/03/intellij-idea-2023-3-6/](https://blog.jetbrains.com/idea/2024/03/intellij-idea-2023-3-6/)
+
+## 2023-03-26
+
+mac发布14.4.1修复问题 [https://www.macrumors.com/2024/03/25/apple-releases-macos-sonoma-14-4-1/](https://www.macrumors.com/2024/03/25/apple-releases-macos-sonoma-14-4-1/)

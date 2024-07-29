@@ -1,0 +1,10 @@
+import{_ as a,o as s,c as d,e as i,a as e,b as n,f as t}from"./app-JCvDZGt6.js";const r={},l=e("h1",{id:"centos-命令",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#centos-命令","aria-hidden":"true"},"#"),n(" centos 命令")],-1),c=t(`<h2 id="安装" tabindex="-1"><a class="header-anchor" href="#安装" aria-hidden="true">#</a> 安装</h2><h3 id="基础命令" tabindex="-1"><a class="header-anchor" href="#基础命令" aria-hidden="true">#</a> 基础命令</h3><p>yum install app</p><h3 id="redis" tabindex="-1"><a class="header-anchor" href="#redis" aria-hidden="true">#</a> redis</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>sudo yum install epel-release
+
+sudo yum update
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="mysql" tabindex="-1"><a class="header-anchor" href="#mysql" aria-hidden="true">#</a> mysql</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>sudo yum install mysql-server 
+
+sudo systemctl sart mysqld.service
+
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip"><p class="hint-container-title">提示</p><p>刚安装的时候没密码 可以通过下面方式设置密码<br> ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;root123&#39;;</p></div><h3 id="java" tabindex="-1"><a class="header-anchor" href="#java" aria-hidden="true">#</a> java</h3><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>yum install java-1.8.0-openjdk
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>`,10);function o(h,u){return s(),d("div",null,[l,i(" more "),c])}const m=a(r,[["render",o],["__file","centos.html.vue"]]);export{m as default};

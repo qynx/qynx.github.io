@@ -1,5 +1,5 @@
 // .vuepress/client.ts
-import { defineClientConfig } from "@vuepress/client";
+import { defineClientConfig } from "vuepress/client";
 import Element from 'element-plus';
 import 'element-plus/dist/index.css'
 import pinyin from './cp/pinyin.vue'

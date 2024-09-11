@@ -12,9 +12,12 @@ sticky: true
 
 <!-- more -->
 
-[yuque](https://www.yuque.com/g/spring-ksba2/ttvy2z/lbq8o8uf12hy800r/collaborator/join?token=9DlyNs8bK8KECL1z&source=doc_collaborator# )
 
-<iframe frameborder=0 allowfullscreen="true" width=100% height=500 src="https://www.yuque.com/g/spring-ksba2/ttvy2z/lbq8o8uf12hy800r/collaborator/join?token=9DlyNs8bK8KECL1z&source=doc_collaborator# 《甲辰年》"/>
+### 24/09
+
+https://yangzhoumu.youtrack.cloud/issues?q=created:%202024-09
+
+### 历史
 
 - [x] 望海潮 东南形胜
 
@@ -32,5 +35,4 @@ sticky: true
 
 - [x] 江上值水如海势聊短述
 
-
-- []  蝶恋花-阅尽天涯离别苦
+- [x]  蝶恋花-阅尽天涯离别苦

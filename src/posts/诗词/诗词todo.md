@@ -35,4 +35,4 @@ https://yangzhoumu.youtrack.cloud/issues?q=created:%202024-09
 
 - [x] 江上值水如海势聊短述
 
-- [x]  蝶恋花-阅尽天涯离别苦
+- [x] 蝶恋花-阅尽天涯离别苦

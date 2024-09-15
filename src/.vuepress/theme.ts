@@ -44,13 +44,13 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一头开发",
+        description: "剑履上殿，入朝不趋，赞拜不名",
         intro: "/zh/intro.html",
       },
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "于此批红",
       },
     },
     "/en/": {
@@ -89,13 +89,13 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "一头开发",
+        description: "剑履上殿，入朝不趋，赞拜不名",
         intro: "/zh/intro.html",
       },
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "于此批红",
       },
     },
   },

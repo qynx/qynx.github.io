@@ -39,7 +39,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "",
+      footer: "本网站由 <image src='/youpaiyun_logo8.svg' width='70' height='70' /> <a href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral'>又拍云</a> 提供CDN加速/云存储服务",
 
       displayFooter: true,
 

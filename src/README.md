@@ -38,11 +38,7 @@ projects:
     desc: 自定义详细介绍
     link: https://你的自定义链接
 
-footer: 少小须勤学，文章可立身
+footer: 本网站由 <image src='/youpaiyun_logo8.svg' width='70' height='70' /> <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a> 提供CDN加速/云存储服务
 ---
 
 向来枉费推移力，此日中流自在行
-
-
-本网站由 [又拍云](https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-) ![youpai](/youpaiyun_logo8.svg =70x70) 提供CDN加速/云存储服务

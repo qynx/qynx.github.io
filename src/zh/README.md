@@ -38,11 +38,6 @@ projects:
     desc: 自定义详细介绍
     link: https://你的自定义链接
 
-footer: 学问勤中得, 萤窗万卷书
+footer: 本网站由 <image src='/youpaiyun_logo8.svg' width='70' height='70' /> <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云</a> 提供CDN加速/云存储服务
 ---
 
-这是一个博客主页的案例。
-
-要使用此布局，你应该在页面前端设置 `layout: Blog` 和 `home: true`。
-
-相关配置文档请见 [博客主页](https://vuepress-theme-hope.github.io/v2/zh/guide/blog/home/)。

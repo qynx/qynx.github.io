@@ -3,6 +3,7 @@ import { defineClientConfig } from "vuepress/client";
 import Element from 'element-plus';
 import 'element-plus/dist/index.css'
 import pinyin from './cp/pinyin.vue'
+import SblgRate from './cp/SblgRate.vue'
 import naive from 'naive-ui'
 
 
@@ -11,5 +12,6 @@ export default defineClientConfig({
     app.use(Element)
     app.use(naive)
     app.component("pinyin", pinyin)
+    app.component("sblg-rate", SblgRate)
   },
 });

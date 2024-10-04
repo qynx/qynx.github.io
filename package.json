@@ -10,17 +10,19 @@
     "docs:dev": "vuepress dev src"
   },
   "devDependencies": {
-    "@vue/repl": "^3.4.0",
-    "@vuepress/bundler-vite": "2.0.0-rc.14",
+    "@vue/repl": "^4.4.2",
+    "@vuepress/bundler-vite": "2.0.0-rc.17",
     "kotlin-playground": "^1.30.0",
     "reveal.js": "^5.1.0",
-    "vue": "^3.4.37",
-    "vuepress": "2.0.0-rc.14",
-    "vuepress-theme-hope": "2.0.0-rc.52"
+    "sass-embedded": "^1.79.4",
+    "vue": "^3.5.11",
+    "vuepress": "2.0.0-rc.17",
+    "vuepress-theme-hope": "2.0.0-rc.58"
   },
   "dependencies": {
-    "element-plus": "^2.8.0",
+    "@vuepress/plugin-markdown-tab": "2.0.0-rc.47",
+    "element-plus": "^2.8.4",
     "katex": "^0.16.11",
-    "naive-ui": "^2.39.0"
+    "naive-ui": "^2.40.1"
   }
 }

@@ -42,3 +42,7 @@ footer: 少小须勤学，文章可立身
 ---
 
 向来枉费推移力，此日中流自在行
+
+
+本网站由 [又拍云](https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+) ![youpai](/youpaiyun_logo8.svg =70x70) 提供CDN加速/云存储服务

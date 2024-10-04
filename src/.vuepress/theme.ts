@@ -6,7 +6,7 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "唐州牧",
+    name: "荆州牧",
     url: "https://mrhope.site",
   },
 
@@ -44,7 +44,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "剑履上殿，入朝不趋，赞拜不名",
+        description: "使持节，剑履上殿，入朝不趋，赞拜不名",
         intro: "/zh/intro.html",
       },
 
@@ -89,7 +89,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "剑履上殿，入朝不趋，赞拜不名",
+        description: "使持节，剑履上殿，入朝不趋，赞拜不名",
         intro: "/zh/intro.html",
       },
 

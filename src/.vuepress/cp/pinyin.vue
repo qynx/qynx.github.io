@@ -9,9 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-<el-popover  :title='props.title' trigger='hover'>
-    <template #reference>
-        <span style='border-bottom: 2px solid green'>{{ props.text }}</span>
-    </template>
-</el-popover>
+<el-tooltip placement="top" :content='props.title' trigger='hover' effect="customized">
+   {{ props.text }}
+</el-tooltip>
 </template>

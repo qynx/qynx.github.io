@@ -140,12 +140,23 @@ export default hopeTheme({
       // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
     },
 
+    // image
+    markdownImage: {
+      // 启用 figure
+      figure: true,
+      // 启用图片懒加载
+      lazyload: true,
+      // 启用图片标记
+      mark: true,
+      // 启用图片大小
+      size: true,
+    },
+
     // Disable features you don’t want here
     mdEnhance: {
       align: true,
       attrs: true,
       chart: true,
-      codetabs: true,
       container: true,
       demo: true,
       echarts: true,

@@ -15,24 +15,8 @@ sticky: true
 
 ### 24/09
 
-https://yangzhoumu.youtrack.cloud/issues?q=created:%202024-09
+https://yangzhoumu.youtrack.cloud/issues?q=project:%20%E8%AF%97%E8%AF%8D%20%7Bresolved%20date%7D:%202024-09
 
-### 历史
+### 24/10
 
-- [x] 望海潮 东南形胜
-
-- [x] 桂枝香 金陵怀古
-
-- [x] 醉花阴 薄雾浓云愁永昼
- 
-- [x] 江城子 密州出猎
-
-- [x] 短歌行
-
-- [x] 旅夜书怀 
-
-- [x] 声声慢
-
-- [x] 江上值水如海势聊短述
-
-- [x] 蝶恋花-阅尽天涯离别苦
+https://yangzhoumu.youtrack.cloud/issues?q=project:%20%E8%AF%97%E8%AF%8D%20%7Bresolved%20date%7D:%202024-10

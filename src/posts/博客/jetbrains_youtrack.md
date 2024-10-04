@@ -11,5 +11,6 @@ tag:
 
 # jetbrains youtrack
 
+<!-- more -->
 
 [官网](https://www.jetbrains.com/youtrack/)

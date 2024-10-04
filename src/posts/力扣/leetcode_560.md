@@ -7,7 +7,6 @@ category:
 tag:
   - leetcode
   - java
-  - 前缀和
 ---
 
 # 560. 和为 K 的子数组

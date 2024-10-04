@@ -38,8 +38,8 @@ export const zhNavbar = navbar([
     ],
   },
   {
-    text: "主题文档",
+    text: "vuepress-theme-hope",
     icon: "note",
-    link: "https://vuepress-theme-hope.github.io/v2/zh/",
+    link: "https://theme-hope.vuejs.press/zh/",
   },
 ]);

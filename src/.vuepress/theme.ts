@@ -50,7 +50,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "于此批红",
+        editLink: "批红",
       },
     },
     "/en/": {
@@ -95,7 +95,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "于此批红",
+        editLink: "批红",
       },
     },
   },

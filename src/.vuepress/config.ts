@@ -14,12 +14,12 @@ export default defineUserConfig({
     "/": {
       lang: "zh-CN",
       title: "向来枉费推移力 此日中流自在行",
-      description: "viper3's blog",
+      description: "荆州牧's blog",
     },
     "/en/": {
       lang: "en-US",
-      title: "viper3's blog",
-      description: "viper3's blog",
+      title: "jingzhoumu's blog",
+      description: "荆州牧's blog",
     }
   },
 

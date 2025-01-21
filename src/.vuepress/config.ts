@@ -13,7 +13,7 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "向来枉费推移力 此日中流自在行",
+      title: "清明在躬 氣質如神",
       description: "荆州牧's blog",
     },
     "/en/": {

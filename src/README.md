@@ -4,7 +4,7 @@ layout: BlogHome
 icon: home
 title: viper3's blog
 heroImage: /logo.svg
-heroText: 清明在躬 氣質如神
+heroText: 游里功夫独造微
 heroFullScreen: true
 tagline: 
 projects:

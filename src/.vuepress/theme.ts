@@ -44,7 +44,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "使持节，剑履上殿，入朝不趋，赞拜不名",
+        description: "我来问道无余说 云在青天水在瓶",
         intro: "/zh/intro.html",
       },
 
@@ -89,7 +89,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "使持节，剑履上殿，入朝不趋，赞拜不名",
+        description: "",
         intro: "/zh/intro.html",
       },
 

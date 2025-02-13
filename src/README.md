@@ -2,9 +2,9 @@
 home: true
 layout: BlogHome
 icon: home
+bgImage: /gongqing.jpg
 title: viper3's blog
-heroImage: /logo.svg
-heroText: 游里功夫独造微
+heroText: 人到洛阳花似锦 偏我来时不逢春
 heroFullScreen: true
 tagline: 
 projects:
@@ -19,14 +19,14 @@ projects:
     link: https://链接地址
 
   - icon: book
-    name: 书籍名称
-    desc: 书籍详细描述
-    link: https://你的书籍链接
+    name: 《资治通鉴》
+    desc: 鉴于往事，有资于治道
+    link: http://product.m.dangdang.com/product.php?pid=23287444&host=product.dangdang.com
 
   - icon: article
-    name: 文章名称
-    desc: 文章详细描述
-    link: https://你的文章链接
+    name: 《游里工夫独造微》
+    desc: 惟精惟一 允执厥中
+    link: https://www.yuque.com/spring-ksba2/ttvy2z/ounrek56x4suztwx?singleDoc# 《游里工夫独造微》
 
   - icon: friend
     name: 伙伴名称

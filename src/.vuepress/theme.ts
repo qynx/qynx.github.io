@@ -1,6 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { codeTabs } from "@vuepress/plugin-markdown-tab";
 
 export default hopeTheme({
   hostname: "https://mister-hope.github.io",
@@ -154,6 +155,7 @@ export default hopeTheme({
 
     // Disable features you don’t want here
     mdEnhance: {
+      codeTabs:true,
       align: true,
       attrs: true,
       chart: true,

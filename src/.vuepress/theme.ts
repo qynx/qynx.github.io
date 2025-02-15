@@ -110,6 +110,7 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
+    slimsearch: true,
     components: {
       components: [
         'BiliBili'

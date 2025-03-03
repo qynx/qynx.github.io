@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@vuepress/plugin-markdown-tab": "2.0.0-rc.74",
-    "element-plus": "^2.9.4",
+    "ant-design-vue": "4.x",
     "katex": "^0.16.21",
     "naive-ui": "^2.41.0"
   }

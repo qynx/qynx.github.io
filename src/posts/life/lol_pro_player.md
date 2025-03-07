@@ -7,7 +7,7 @@ category:
 tag:
   - lol
   - showmaker
-  - life
+  - 人生
   - interview
   - 电竞人物志
 ---

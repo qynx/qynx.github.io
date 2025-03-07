@@ -110,7 +110,15 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-    slimsearch: true,
+    slimsearch: ({
+      customFields: [
+        {
+          name: 'author',
+          getter: (page) => page.frontmatter.author,
+          formatter: '作者：$content',
+        },
+      ],
+    }),
     components: {
       components: [
         'BiliBili'

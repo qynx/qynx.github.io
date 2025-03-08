@@ -9,7 +9,8 @@ const props = defineProps({
 </script>
 
 <template>
-<el-tooltip placement="top" :content='props.title' trigger='hover' effect="customized">
-   {{ props.text }}
-</el-tooltip>
+<a-tooltip placement="top" trigger='hover' effect="customized">
+    <template #title>{{ props.title }}</template>
+   <u>{{ props.text }}</u>
+</a-tooltip>
 </template>

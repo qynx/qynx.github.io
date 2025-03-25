@@ -18,6 +18,9 @@ export default hopeTheme({
   repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "docs",
+  changelog: true,
+  hotReload: true,
+
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 

@@ -9,17 +9,16 @@ export default defineUserConfig({
     vuePluginOptions: {},
   }),
   base: "/",
-
   locales: {
     "/": {
       lang: "zh-CN",
       title: "清明在躬 氣志如神",
-      description: "荆州牧's blog",
+      description: "希文's blog",
     },
     "/en/": {
       lang: "en-US",
       title: "jingzhoumu's blog",
-      description: "荆州牧's blog",
+      description: "希文's blog",
     }
   },
 

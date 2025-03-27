@@ -42,7 +42,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "我来问道无余说 云在青天水在瓶",
+        description: "今年花胜去年红，可惜明年花更好，知与谁同？",
         intro: "/zh/intro.html",
       },
 

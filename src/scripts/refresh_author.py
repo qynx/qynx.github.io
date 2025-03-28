@@ -22,7 +22,6 @@ def load_all_author():
 
 author_path_map = load_all_author()
 
-
 def do_replace(file_path):
     with open(file_path, 'r') as f:
         st = f.read()
@@ -48,9 +47,18 @@ def do_replace(file_path):
     new_str = yaml.safe_dump(r, indent=2, allow_unicode=True, sort_keys=False)
 
     file_str = replace_formatter(st, new_str)
+    print("refresh %s" % (file_path))
     with open(file_path, 'w') as f:
         f.write(file_str)
 
+def loop_fresh(root_dir):
+    for file in os.listdir(root_dir):
+        ab_path = os.path.join(root_dir, file)
+        if os.path.isdir(ab_path):
+            loop_fresh(ab_path)
+        elif file.endswith(".md"):
+            do_replace(ab_path)
+        else:
+            pass
 if __name__ == "__main__":
-    file = os.path.join(posts_dir, "诗词/清/浣溪沙-残雪凝辉冷画屏.md")
-    do_replace(file)
+    loop_fresh(os.path.join(posts_dir, "诗词"))

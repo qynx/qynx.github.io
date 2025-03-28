@@ -3,3 +3,5 @@ src/.vuepress/.temp/
 src/.vuepress/.cache/
 src/.vuepress/dist/
 .obsidian
+.idea
+__pycache__

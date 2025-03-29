@@ -4,7 +4,7 @@ date: 2024-09-07
 category:
   - 工具
 tag:
-  - obisian
+  - 入门
 ---
 
 # obsidian使用

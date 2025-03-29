@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 bgImage: /gongqing.jpg
-title: viper3's blog
+title: 希文
 heroText: 人到洛阳花似锦 偏我来时不逢春
 heroFullScreen: true
 tagline: 

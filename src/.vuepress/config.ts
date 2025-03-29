@@ -17,8 +17,8 @@ export default defineUserConfig({
     },
     "/en/": {
       lang: "en-US",
-      title: "jingzhoumu's blog",
-      description: "希文's blog",
+      title: "xiwen's blog",
+      description: "xiwen's blog",
     }
   },
 

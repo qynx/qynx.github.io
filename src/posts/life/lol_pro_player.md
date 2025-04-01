@@ -6,10 +6,7 @@ category:
   - lol_player
 tag:
   - lol
-  - showmaker
   - 人生
-  - interview
-  - 电竞人物志
 ---
 
 # lol_pro_player

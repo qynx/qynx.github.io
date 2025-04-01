@@ -181,15 +181,26 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
-    slimsearch: ({
+    slimsearch: {
       customFields: [
         {
           name: 'author',
-          getter: (page) => page.frontmatter.author,
+          getter: (page) => {
+            if (typeof(page.frontmatter.author) == 'string') {
+              return page.frontmatter.author
+            }
+            if (page.frontmatter.author && page.frontmatter.author.name) {
+              return page.frontmatter.author.name
+            }
+            if (page.frontmatter.author && page.frontmatter.author instanceof Array) {
+              return page.frontmatter.author.map(it => it.name).join(" ")
+            }
+            return undefined
+          },
           formatter: '作者：$content',
         },
       ],
-    }),
+    },
     components: {
       components: [
         'BiliBili'

@@ -13,9 +13,8 @@ export const zhNavbar = navbar([
         icon: "edit",
         prefix: "诗词/",
         children: [
-          { text: "临江仙-杨慎", icon: "alias", link: "明/临江仙_杨慎" },
-          { text: "相见欢-李煜", icon: "alias", link: "赵宋/相见欢-林花谢了春红" },
-          { text: "锦瑟-李商隐", icon: "alias", link: "李唐/锦瑟" },
+          { text: "临江仙-滚滚长江东逝水", icon: "alias", link: "明/临江仙_杨慎" },
+          { text: "相见欢-林花谢了春红", icon: "alias", link: "赵宋/相见欢-林花谢了春红" },
           { text: "临江仙-送钱穆父", icon: "alias", link: "赵宋/临江仙-送钱穆父" }
         ],
       },
@@ -24,6 +23,7 @@ export const zhNavbar = navbar([
         icon: "edit",
         prefix: "诗词/",
         children: [
+          { text: "锦瑟", icon: "alias", link: "李唐/锦瑟" },
           { text: "把酒问月", icon: "alias", link: "李唐/把酒问月" },
         ],
       }

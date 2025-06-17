@@ -42,7 +42,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "自是人生长恨水长东",
+        description: "林花谢了春红，太匆匆",
         intro: "/zh/intro.html",
       },
 

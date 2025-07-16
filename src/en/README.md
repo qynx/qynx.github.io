@@ -2,8 +2,8 @@
 home: true
 layout: BlogHome
 icon: home
-bgImage: /gongqing.jpg
-title: xiwen
+bgImage: http://cdnblog.laikecc.xyz/gongqing.jpg
+title: 章衡
 heroText: Le vent se lève, il faut tenter de vivre
 heroFullScreen: true
 tagline: 

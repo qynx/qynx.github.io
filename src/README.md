@@ -2,7 +2,7 @@
 home: true
 layout: BlogHome
 icon: home
-bgImage: /gongqing.jpg
+bgImage: http://cdnblog.laikecc.xyz/gongqing.jpg
 title: 持盈
 heroText: 人到洛阳花似锦 偏我来时不逢春
 heroFullScreen: true

@@ -45,6 +45,6 @@ jobs:
           folder: src/.vuepress/dist
 
       - name: 同步腾讯云
-        run:  npx edgeone pages deploy src/.vuepress/dist  -n zhangheng -t ${{ secrets.EDGEONE_API_TOKEN }} [-e <env>]
+        run:  npx edgeone pages deploy src/.vuepress/dist  -n zhangheng -t ${{ secrets.EDGEONE_API_TOKEN }}
         env:
           EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}

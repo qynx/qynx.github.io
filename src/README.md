@@ -11,7 +11,7 @@ projects:
   - icon: project
     name: 博客主题文档
     desc: vuepress-hope
-    link: https://theme-hope.vuejs.press/
+    link: https://theme-hope.vuejs.press
 
   - icon: link
     name: 链接名称

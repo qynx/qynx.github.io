@@ -26,6 +26,14 @@ export const zhNavbar = navbar([
           { text: "锦瑟", icon: "alias", link: "李唐/锦瑟" },
           { text: "把酒问月", icon: "alias", link: "李唐/把酒问月" },
         ],
+      },
+      {
+        text: "文",
+        icon: "edit",
+        prefix: "古文/",
+        children: [
+          { text: "游褒禅山记", icon: "alias", link: "游褒禅山记" },
+        ],
       }
     ],
   },

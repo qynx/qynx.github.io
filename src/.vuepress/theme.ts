@@ -48,7 +48,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "批红",
+        editLink: "点校",
       },
     },
     "/en/": {
@@ -63,12 +63,12 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        description: "A Java programmer",
+        description: "One cup of Java",
         intro: "/en/intro.html",
       },
 
       metaLocales: {
-        editLink: "Edit this page on GitHub",
+        editLink: "Edit this page",
       },
     },
 
@@ -93,7 +93,7 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "批红",
+        editLink: "点校",
       },
     },
   },

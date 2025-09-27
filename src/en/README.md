@@ -26,7 +26,7 @@ projects:
   - icon: article
     name: 《游里工夫独造微》
     desc: science
-    link: https://www.yuque.com/spring-ksba2/ttvy2z/ounrek56x4suztwx?singleDoc# 《游里工夫独造微》
+    link: https://zslngu.feishu.cn/wiki/Tm5HwORUziuPXWkiYFQc5BIMnah?from=from_copylink
 
   - icon: friend
     name: friends

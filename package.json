@@ -11,7 +11,7 @@
     "docs:dev": "vuepress dev src"
   },
   "devDependencies": {
-    "@vue/repl": "^4.6.2",
+    "@vue/repl": "^4.7.0",
     "@vuepress/bundler-vite": "2.0.0-rc.24",
     "@vuepress/plugin-markdown-image": "2.0.0-rc.112",
     "@vuepress/plugin-pwa": "2.0.0-rc.112",
@@ -21,10 +21,10 @@
     "flowchart.ts": "^3.0.1",
     "i": "^0.3.7",
     "kotlin-playground": "^1.30.0",
-    "mermaid": "^11.9.0",
+    "mermaid": "^11.12.0",
     "reveal.js": "^5.2.1",
-    "sass-embedded": "^1.89.2",
-    "vue": "^3.5.18",
+    "sass-embedded": "^1.93.2",
+    "vue": "^3.5.22",
     "vuepress": "2.0.0-rc.24",
     "vuepress-theme-hope": "2.0.0-rc.94"
   },
@@ -34,6 +34,6 @@
     "@vuepress/plugin-revealjs": "2.0.0-rc.112",
     "ant-design-vue": "~4.2.6",
     "katex": "^0.16.22",
-    "naive-ui": "^2.42.0"
+    "naive-ui": "^2.43.1"
   }
 }

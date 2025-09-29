@@ -1,14 +1,20 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { viteBundler } from '@vuepress/bundler-vite'
+import { getPostsPlugin } from './plugins/getPosts.js'
 
 
 export default defineUserConfig({
+  plugins: [getPostsPlugin()],
   bundler: viteBundler({
     viteOptions: {},
     vuePluginOptions: {},
   }),
   head: [
+    [
+      'link', // 定义图标链接
+      { rel: 'icon', href: 'http://cdnblog.laikesxw.top/2025/裁剪.png' } // rel='icon' 设置图标，href 指向 public 文件夹下的图片
+    ],
     [ 
       "script",
       {},
@@ -40,7 +46,7 @@ export default defineUserConfig({
     },
     "/en/": {
       lang: "en-US",
-      title: "ChiYing's blog",
+      title: "Le vent se lève, il faut tenter de vivre",
       description: "ChiYing's blog",
     }
   },

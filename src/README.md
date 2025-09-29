@@ -6,6 +6,7 @@ bgImage: http://cdnblog.laikesxw.top/gongqing.jpg
 title: 持盈
 heroText: 人到洛阳花似锦 偏我来时不逢春
 heroFullScreen: true
+date: 2025-09-30
 tagline: 
 projects:
   - icon: project

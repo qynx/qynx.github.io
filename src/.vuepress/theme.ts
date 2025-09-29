@@ -19,7 +19,6 @@ export default hopeTheme({
   changelog: true,
   hotReload: true,
 
-
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
@@ -66,10 +65,12 @@ export default hopeTheme({
         description: "One cup of Java",
         intro: "/en/intro.html",
       },
-
+    
       metaLocales: {
         editLink: "Edit this page",
       },
+
+      author: "ChiYing",
     },
 
     /**
@@ -176,9 +177,6 @@ export default hopeTheme({
     kotlinPlayground: true,
   },
 
-
-
-
   plugins: {
     blog: true,
     slimsearch: {
@@ -240,7 +238,7 @@ export default hopeTheme({
   
 
     pwa: {
-      favicon: "/favicon.ico",
+      favicon: "http://cdnblog.laikesxw.top/2025/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250929005304_3_9.jpg",
       cacheHTML: true,
       cachePic: true,
       appendBase: true,

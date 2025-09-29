@@ -5,8 +5,8 @@ title: mac安装多个python版本
 category:
   - 博客
 tag:
-  - 环境
-  - python
+  - 技术
+  - 环境配置
 ---
 
 # mac安装多个python版本

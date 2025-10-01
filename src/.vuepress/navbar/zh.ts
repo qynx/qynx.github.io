@@ -14,7 +14,7 @@ export const zhNavbar = navbar([
         prefix: "诗词/",
         children: [
           { text: "临江仙-滚滚长江东逝水", icon: "alias", link: "明/临江仙_杨慎" },
-          { text: "相见欢-林花谢了春红", icon: "alias", link: "赵宋/相见欢-林花谢了春红" },
+          { text: "相见欢-林花谢了春红", icon: "alias", link: "南唐/相见欢-林花谢了春红" },
           { text: "临江仙-送钱穆父", icon: "alias", link: "赵宋/临江仙-送钱穆父" }
         ],
       },

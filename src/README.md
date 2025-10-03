@@ -10,8 +10,8 @@ date: 2025-09-30
 tagline: 
 projects:
   - icon: project
-    name: 博客主题文档
-    desc: vuepress-hope
+    name: vuepress-hope
+    desc: 博客主题介绍
     link: https://theme-hope.vuejs.press
 
   - icon: link
@@ -30,9 +30,9 @@ projects:
     link: https://zslngu.feishu.cn/wiki/Tm5HwORUziuPXWkiYFQc5BIMnah?from=from_copylink
 
   - icon: friend
-    name: 伙伴名称
-    desc: 伙伴详细介绍
-    link: https://你的伙伴链接
+    name: 𝓜𝓻. 𝓗𝓸𝓹𝓮
+    desc: Where there is light, there is hope
+    link: https://mister-hope.com/
 
   - icon: /logo.svg
     name: 自定义项目

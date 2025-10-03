@@ -1,6 +1,6 @@
 ---
 home: true
-layout: BlogHome
+layout: Blog
 icon: home
 bgImage: http://cdnblog.laikesxw.top/gongqing.jpg
 title: ChiYing

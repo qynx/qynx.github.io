@@ -42,7 +42,7 @@ export default hopeTheme({
 
       blog: {
         description: "林花谢了春红，太匆匆",
-        intro: "/zh/intro.html",
+        intro: "/intro.html",
       },
 
       // page meta

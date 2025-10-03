@@ -1,15 +1,15 @@
 {
   "meta": {
-    "totalCommits": 312,
+    "totalCommits": 313,
     "firstCommit": "2022-11-07 01:58:18 +0800",
-    "lastCommit": "2025-10-03 14:09:13 +0800",
+    "lastCommit": "2025-10-03 18:13:08 +0800",
     "period": "2022-11-07 至 2025-10-03",
     "authorsCount": 2
   },
   "authors": [
     {
       "author": "zsl <zslngu@163.com>",
-      "count": 311
+      "count": 312
     },
     {
       "author": "qynx <37181043+qynx@users.noreply.github.com>",
@@ -651,7 +651,7 @@
     ],
     [
       "2025-10-03",
-      3
+      4
     ]
   ],
   "monthly": [
@@ -677,7 +677,7 @@
     ],
     [
       "2025-10",
-      4
+      5
     ]
   ],
   "weekly": [
@@ -703,7 +703,7 @@
     ],
     [
       "周五",
-      43
+      44
     ],
     [
       "周六",
@@ -721,11 +721,11 @@
     ],
     [
       "package.json",
-      28
+      29
     ],
     [
       "src/README.md",
-      21
+      22
     ],
     [
       "src/.vuepress/navbar/zh.ts",
@@ -794,15 +794,15 @@
       4
     ],
     [
+      "build",
+      4
+    ],
+    [
       "pnpm",
       4
     ],
     [
       "tag",
-      3
-    ],
-    [
-      "build",
       3
     ],
     [

@@ -1,9 +1,11 @@
+
+// 塞入文章数据 全局变量
 export const getPostsPlugin = (options) => {
   return {
     name: 'vuepress-plugin-get-posts',
     onInitialized: (app) => {
-        console.log('getPostsPlugin initialized')
-        console.log(app.pages[0])
+       // console.log('getPostsPlugin initialized')
+      //console.log(app.pages[0])
       // 过滤文章页面
       const posts = app.pages.filter(page => 
         page.filePathRelative?.startsWith('posts/') && 
@@ -17,6 +19,7 @@ export const getPostsPlugin = (options) => {
       
       // 添加到 siteData
       app.siteData.posts = posts
+      return app
     }
   }
 }

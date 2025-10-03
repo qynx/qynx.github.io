@@ -11,7 +11,6 @@ import MonthlyChart from './cp/MonthlyChart.vue';
 import naive from 'naive-ui'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
-import GithubContris from "./cp/GithubContris.vue";
 import GitCommitPanel from "./cp/GitCommitPanel.vue";
 
 
@@ -23,7 +22,6 @@ export default defineClientConfig({
     app.component("sblg-rate", SblgRate)
     app.component("sb-timeline", SbTimeline)
     app.component("monthly-chart", MonthlyChart)
-    app.component("github-contris", GithubContris)
     app.component("git-commit-panel", GitCommitPanel)
   },
 });

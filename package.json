@@ -7,9 +7,9 @@
   "scripts": {
     "git-stats": "node src/scripts/git-commit-gen.js",
     "docs:build": "vuepress build src",
-    "build": "pnpm run git-stats && vuepress build src",
+    "build": "vuepress build src",
     "docs:clean-dev": "vuepress dev src --clean-cache",
-    "docs:dev": "vuepress dev src"
+    "docs:dev": "pnpm run git-stats && vuepress dev src"
   },
   "devDependencies": {
     "@vue/repl": "^4.7.0",

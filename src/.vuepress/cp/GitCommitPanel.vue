@@ -29,6 +29,15 @@
           <canvas ref="authorChart"></canvas>
         </div>
       </div>
+
+       <!-- 作者贡献图 -->
+      <!--<div class="chart-card">
+        <h3 class="chart-title">作者贡献分布2</h3>
+        <div class="chart-wrapper">
+          <canvas ref="authorChart2" class="echarts-chart"></canvas>
+        </div>
+      </div>-->
+      
       
       <!-- 时间线图 -->
       <div class="chart-card">
@@ -97,6 +106,14 @@ import Chart from 'chart.js/auto';
 import { TimeScale } from 'chart.js/auto';
 import { fi } from 'date-fns/locale';
 import 'chartjs-adapter-date-fns';
+import * as echarts from 'echarts';
+import { GridComponent } from 'echarts/components';
+import { LineChart } from 'echarts/charts';
+import { UniversalTransition } from 'echarts/features';
+import { CanvasRenderer } from 'echarts/renderers';
+
+echarts.use([GridComponent, LineChart, CanvasRenderer, UniversalTransition]);
+
 
 const props = defineProps({
   gitStats: {
@@ -117,9 +134,34 @@ const myGitStats = ref({})
       if (!finalGitStats.value || !finalGitStats.value.meta) {
         return
       }
+
+      if (authorChart2.value) {
+        var ech = echarts.init(authorChart2.value)
+        const option2 = {
+          xAxis: {
+            type: "category",
+            data: finalGitStats.value.authors.slice(0, 10).map(a => a.author.split('<')[0].trim())
+          },
+          yAxis: {
+            type: "value",
+            axisLabel: {
+              interval: 200
+            }
+          },
+          series: [
+            {
+              data: finalGitStats.value.authors.slice(0, 10).map(a => a.count),
+              type: 'bar'
+            }
+          ]
+        }
+        ech.setOption(option2)
+      }
       
       // 作者贡献图
       if (authorChart.value) {
+       
+
         new Chart(authorChart.value, {
           type: 'bar',
           data: {
@@ -248,9 +290,6 @@ const myGitStats = ref({})
           second: '2-digit'
         });
       }
-      const modifyData = () => {
-        
-      }
     const initData =  async() => {
         const res=  await (await fetch('/data/git-stats.json')).json()
         //console.log(`init data ${JSON.stringify(res)}`)
@@ -260,6 +299,7 @@ const myGitStats = ref({})
 
     // 图表引用
     const authorChart = ref(null);
+    const authorChart2 = ref(null);
     const timelineChart = ref(null);
     const monthlyChart = ref(null);
     const weeklyChart = ref(null);
@@ -277,9 +317,9 @@ const myGitStats = ref({})
     
 
     // 更新当前时间
-    //updateCurrentTime();
+    updateCurrentTime();
     // 设置定时器每秒更新时间
-    setInterval(updateCurrentTime, 1000);
+    //setInterval(updateCurrentTime, 1000);
     // 初始化图表
     setTimeout(initCharts, 500);
     onMounted(async() => {
@@ -334,6 +374,11 @@ const myGitStats = ref({})
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
   margin-bottom: 30px;
+}
+
+.echarts-chart {
+  width: 300px;
+  height: 150px;
 }
 
 .chart-card {

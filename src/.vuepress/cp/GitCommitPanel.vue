@@ -91,29 +91,25 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted, computed } from 'vue';
 import Chart from 'chart.js/auto';
 import { TimeScale } from 'chart.js/auto';
 import { fi } from 'date-fns/locale';
 import 'chartjs-adapter-date-fns';
 
+const props = defineProps({
+  gitStats: {
+    type: Object,
+    default: () => (undefined)
+  }
+});
+
 Chart.register(
   TimeScale
 )
 
-export default {
-  name: 'GitStatsDashboard',
-  props: {
-    // 组件可以接收外部传入的数据
-    gitStats: {
-      type: Object,
-      default: () => (undefined)
-    }
-  },  
-  setup(props) {
-
-    const myGitStats = ref({})
+const myGitStats = ref({})
     const finalGitStats = ref(props.gitStats || myGitStats.value);
 
     const initCharts =()=>{
@@ -232,35 +228,35 @@ export default {
         });
       }
     }
-  const formatDate = (dateStr)=>{
-      if (!dateStr) return '';
-      const date = new Date(dateStr);
-      return date.toLocaleDateString('zh-CN', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
-    }
-  const updateCurrentTime = () => {
-      const now = new Date();
-      currentTime.value = now.toLocaleString('zh-CN', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      });
-    }
-    const modifyData = () => {
-      
-    }
-   const initData =  async() => {
-      const res=  await (await fetch('/data/git-stats.json')).json()
-      //console.log(`init data ${JSON.stringify(res)}`)
-      finalGitStats.value = res
-      return res
-    }
+    const formatDate = (dateStr)=>{
+        if (!dateStr) return '';
+        const date = new Date(dateStr);
+        return date.toLocaleDateString('zh-CN', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit'
+        });
+      }
+    const updateCurrentTime = () => {
+        const now = new Date();
+        currentTime.value = now.toLocaleString('zh-CN', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        });
+      }
+      const modifyData = () => {
+        
+      }
+    const initData =  async() => {
+        const res=  await (await fetch('/data/git-stats.json')).json()
+        //console.log(`init data ${JSON.stringify(res)}`)
+        finalGitStats.value = res
+        return res
+      }
 
     // 图表引用
     const authorChart = ref(null);
@@ -286,28 +282,9 @@ export default {
     setInterval(updateCurrentTime, 1000);
     // 初始化图表
     setTimeout(initCharts, 500);
-
-    async function mounted() {
+    onMounted(async() => {
       await initData(); 
-      modifyData()
-    }
-    mounted()
-    
-    return {
-      authorChart,
-      timelineChart,
-      monthlyChart,
-      weeklyChart,
-      currentTime,
-      totalCommits,
-      contributorsCount,
-      firstCommitDate,
-      lastCommitDate,
-      popularFiles,
-      popularWords
-    };
-  }
-};
+    })
 </script>
 
 <style scoped>

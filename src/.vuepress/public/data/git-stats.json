@@ -1,15 +1,15 @@
 {
   "meta": {
-    "totalCommits": 309,
+    "totalCommits": 310,
     "firstCommit": "2022-11-07 01:58:18 +0800",
-    "lastCommit": "2025-10-01 18:00:07 +0800",
-    "period": "2022-11-07 至 2025-10-01",
+    "lastCommit": "2025-10-03 13:34:48 +0800",
+    "period": "2022-11-07 至 2025-10-03",
     "authorsCount": 2
   },
   "authors": [
     {
       "author": "zsl <zslngu@163.com>",
-      "count": 308
+      "count": 309
     },
     {
       "author": "qynx <37181043+qynx@users.noreply.github.com>",
@@ -648,6 +648,10 @@
     [
       "2025-10-01",
       1
+    ],
+    [
+      "2025-10-03",
+      1
     ]
   ],
   "monthly": [
@@ -673,7 +677,7 @@
     ],
     [
       "2025-10",
-      1
+      2
     ]
   ],
   "weekly": [
@@ -699,7 +703,7 @@
     ],
     [
       "周五",
-      40
+      41
     ],
     [
       "周六",
@@ -713,11 +717,11 @@
     ],
     [
       "pnpm-lock.yaml",
-      29
+      30
     ],
     [
       "package.json",
-      27
+      28
     ],
     [
       "src/README.md",
@@ -725,7 +729,7 @@
     ],
     [
       "src/.vuepress/navbar/zh.ts",
-      17
+      18
     ],
     [
       "src/.vuepress/config.ts",
@@ -740,11 +744,11 @@
       12
     ],
     [
-      "src/posts/游记/杭州游记.md",
+      "src/en/README.md",
       10
     ],
     [
-      "src/posts/诗词/诗词todo.md",
+      "src/posts/游记/杭州游记.md",
       10
     ]
   ],

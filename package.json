@@ -5,8 +5,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "git-stats": "node src/scripts/git-commit-gen.js",
     "docs:build": "vuepress build src",
-    "build": "vuepress build src",
+    "build": "pnpm run git-stats && vuepress build src",
     "docs:clean-dev": "vuepress dev src --clean-cache",
     "docs:dev": "vuepress dev src"
   },
@@ -33,8 +34,14 @@
     "@vuepress/plugin-markdown-tab": "2.0.0-rc.112",
     "@vuepress/plugin-revealjs": "2.0.0-rc.112",
     "ant-design-vue": "~4.2.6",
+    "chalk": "^5.6.2",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^4.1.0",
+    "git-hist": "^0.2.0",
+    "gitlog": "^5.1.0",
     "katex": "^0.16.22",
     "naive-ui": "^2.43.1",
+    "shelljs": "^0.10.0",
     "vue-echarts": "^8.0.0"
   }
 }

@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 bgImage: http://cdnblog.laikesxw.top/gongqing.jpg
-title: 章衡
+title: ChiYing
 heroText: Le vent se lève, il faut tenter de vivre
 heroFullScreen: true
 date: 2025-09-30

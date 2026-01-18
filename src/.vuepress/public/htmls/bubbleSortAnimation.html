@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Cinematic Visualization</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
+        :root {
+            --bg-color: #fdfbf7;
+            --bar-default: #a8dadc;
+            --bar-active: #ffd6a5; /* Yellow/Orange for comparison */
+            --bar-swap: #ffadad;   /* Red for swapping */
+            --bar-sorted: #caffbf; /* Green for sorted */
+            --text-main: #2b2d42;
+            --text-sub: #8d99ae;
+            --shadow: 0 10px 30px -10px rgba(0,0,0,0.15);
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+
+        /* Dynamic Background Particles */
+        #canvas-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        /* Main Container */
+        #app {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* Title Overlay */
+        #title-card {
+            position: absolute;
+            top: 10%;
+            text-align: center;
+            transition: opacity 1s;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--text-main);
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* The Sorting Stage */
+        #stage {
+            position: relative;
+            width: 800px;
+            height: 400px;
+            /* border-bottom: 2px solid #eee; */
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 100px; /* Space for subtitles */
+        }
+
+        /* Individual Bars/Bubbles */
+        .bar-container {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth movement */
+        }
+
+        .bar {
+            width: 100%;
+            border-radius: 30px; /* Capsule shape */
+            background-color: var(--bar-default);
+            box-shadow: var(--shadow);
+            transition: background-color 0.3s, height 0.5s, transform 0.3s;
+            position: relative;
+        }
+
+        /* Adding a shine effect to bars */
+        .bar::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+        }
+
+        .bar-value {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+            opacity: 0; /* Hidden initially */
+            transform: translateY(-10px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .bar-container.visible .bar-value {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Comparison Indicator (The Bracket) */
+        #indicator {
+            position: absolute;
+            height: 20px;
+            border-bottom: 3px solid var(--text-main);
+            border-left: 3px solid var(--text-main);
+            border-right: 3px solid var(--text-main);
+            bottom: -40px;
+            transition: left 0.5s, width 0.5s, opacity 0.3s;
+            opacity: 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        /* Subtitles Area */
+        #subtitle-box {
+            position: absolute;
+            bottom: 50px;
+            width: 80%;
+            max-width: 800px;
+            padding: 20px 40px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: transform 0.5s opacity 0.5s;
+        }
+
+        .sub-en {
+            display: block;
+            font-size: 1.3rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .sub-cn {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+
+        /* Utility classes for state */
+        .comparing .bar {
+            background-color: var(--bar-active);
+            transform: scale(1.05);
+        }
+
+        .swapping .bar {
+            background-color: var(--bar-swap);
+        }
+
+        .sorted .bar {
+            background-color: var(--bar-sorted);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Background Animation -->
+    <canvas id="canvas-bg"></canvas>
+
+    <div id="app">
+        <!-- Title -->
+        <div id="title-card">
+            <h1>Bubble Sort</h1>
+            <h2>可视化算法原理 · Visualizing Algorithms</h2>
+        </div>
+
+        <!-- Animation Stage -->
+        <div id="stage">
+            <!-- Bars will be injected here by JS -->
+            <div id="indicator"></div>
+        </div>
+
+        <!-- Subtitles -->
+        <div id="subtitle-box">
+            <span class="sub-en" id="txt-en">Loading visualization...</span>
+            <span class="sub-cn" id="txt-cn">正在加载可视化...</span>
+        </div>
+    </div>
+
+    <script>
+        // --- Configuration ---
+        const DATA = [50, 25, 80, 35, 10, 60, 95, 15]; // The dataset
+        const BAR_WIDTH = 60;
+        const GAP = 30; // Gap between bars
+        const TOTAL_WIDTH = DATA.length * (BAR_WIDTH + GAP) - GAP;
+        const SPEED_MODIFIER = 1.0; // Adjust to speed up/slow down globally
+
+        // --- DOM Elements ---
+        const stage = document.getElementById('stage');
+        const indicator = document.getElementById('indicator');
+        const txtEn = document.getElementById('txt-en');
+        const txtCn = document.getElementById('txt-cn');
+        const titleCard = document.getElementById('title-card');
+
+        // --- State ---
+        let bars = []; // Stores objects: { value, element, index }
+
+        // --- Helper: Sleep ---
+        const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms * SPEED_MODIFIER));
+
+        // --- Helper: Subtitles ---
+        async function say(en, cn, duration = 2000) {
+            txtEn.style.opacity = 0;
+            txtCn.style.opacity = 0;
+            
+            await wait(300); // Fade out time
+            
+            txtEn.innerText = en;
+            txtCn.innerText = cn;
+            
+            txtEn.style.opacity = 1;
+            txtCn.style.opacity = 1;
+
+            if (duration > 0) await wait(duration);
+        }
+
+        // --- Initialization ---
+        function init() {
+            // Center the stage visually
+            stage.style.width = `${TOTAL_WIDTH}px`;
+
+            DATA.forEach((val, i) => {
+                const container = document.createElement('div');
+                container.classList.add('bar-container');
+                
+                // Calculate height percentage (max value in data is approx 100 for scaling)
+                const heightPct = (val / 100) * 350; 
+
+                const bar = document.createElement('div');
+                bar.classList.add('bar');
+                bar.style.height = `${heightPct}px`;
+
+                const label = document.createElement('div');
+                label.classList.add('bar-value');
+                label.innerText = val;
+
+                container.appendChild(bar);
+                container.appendChild(label);
+                stage.appendChild(container);
+
+                // Set initial position
+                container.style.left = `${i * (BAR_WIDTH + GAP)}px`;
+
+                bars.push({
+                    value: val,
+                    dom: container,
+                    barDom: bar,
+                    index: i
+                });
+            });
+        }
+
+        // --- Visual Actions ---
+
+        function updatePositions() {
+            bars.forEach((obj, i) => {
+                obj.dom.style.left = `${i * (BAR_WIDTH + GAP)}px`;
+                obj.dom.style.zIndex = 10;
+            });
+        }
+
+        function highlight(idx1, idx2) {
+            bars[idx1].dom.classList.add('comparing');
+            bars[idx2].dom.classList.add('comparing');
+            
+            // Move indicator
+            const leftPos = idx1 * (BAR_WIDTH + GAP);
+            const width = (BAR_WIDTH * 2) + GAP;
+            indicator.style.left = `${leftPos}px`;
+            indicator.style.width = `${width}px`;
+            indicator.style.opacity = 1;
+        }
+
+        function unhighlight(idx1, idx2) {
+            bars[idx1].dom.classList.remove('comparing', 'swapping');
+            bars[idx2].dom.classList.remove('comparing', 'swapping');
+        }
+
+        function markSwap(idx1, idx2) {
+            bars[idx1].dom.classList.add('swapping');
+            bars[idx2].dom.classList.add('swapping');
+        }
+
+        function markSorted(idx) {
+            bars[idx].dom.classList.add('sorted');
+            // Little jump effect
+            bars[idx].dom.style.transform = "translateY(-10px)";
+            setTimeout(() => {
+                bars[idx].dom.style.transform = "translateY(0)";
+            }, 300);
+        }
+
+        // --- The Algorithm (Narrated) ---
+        async function runBubbleSort() {
+            await wait(1000);
+
+            // Intro
+            await say("Welcome. This is a visualization of Bubble Sort.", "欢迎。这是冒泡排序的可视化演示。", 3000);
+            
+            // Show values
+            bars.forEach(b => b.dom.classList.add('visible'));
+            await say("We have an unsorted collection of numbers.", "我们有一组无序的数字。", 3000);
+            
+            await say("The goal is to sort them from smallest to largest.", "目标是将它们从小到大排列。", 3000);
+            
+            await say("Bubble Sort works by comparing neighbors.", "冒泡排序通过比较相邻元素来工作。", 3000);
+            
+            // Fade out title to focus on stage
+            titleCard.style.opacity = 0.2;
+
+            let len = bars.length;
+            
+            for (let i = 0; i < len; i++) {
+                
+                // Narrative for the first pass
+                if (i === 0) {
+                   await say("Let's start the first pass from the left.", "让我们从左边开始第一轮扫描。", 2000);
+                }
+
+                let swapped = false;
+
+                for (let j = 0; j < len - i - 1; j++) {
+                    
+                    // Highlight
+                    highlight(j, j+1);
+                    
+                    if (i === 0 && j === 0) {
+                         await say("We compare the first two numbers.", "我们比较前两个数字。", 2000);
+                         await say(`Is ${bars[j].value} greater than ${bars[j+1].value}?`, `${bars[j].value} 比 ${bars[j+1].value} 大吗？`, 2000);
+                    } else {
+                        // Less verbose later
+                        await wait(600); 
+                    }
+
+                    // Compare
+                    if (bars[j].value > bars[j + 1].value) {
+                        
+                        if (i === 0 && j === 0) {
+                            await say("Yes, so we must swap them.", "是的，所以我们必须交换它们。", 1000);
+                        } else if (i === 0 && j === 1) {
+                             // Just action
+                        }
+
+                        markSwap(j, j+1);
+                        await wait(500); // Wait for color change
+
+                        // Logic Swap
+                        let temp = bars[j];
+                        bars[j] = bars[j + 1];
+                        bars[j + 1] = temp;
+                        swapped = true;
+
+                        // Visual Swap (update CSS left property)
+                        updatePositions();
+                        
+                        await wait(1000); // Wait for movement to finish
+                    } else {
+                        if (i === 0 && j === 0) {
+                             await say("No, so they stay where they are.", "不，所以它们保持原位。", 2000);
+                        }
+                        await wait(500);
+                    }
+
+                    unhighlight(j, j+1);
+                }
+
+                // Mark the last element of this pass as sorted
+                const sortedIndex = len - i - 1;
+                markSorted(sortedIndex);
+                indicator.style.opacity = 0;
+
+                if (i === 0) {
+                    await say("The largest number has 'bubbled' to the top.", "最大的数字已经“冒泡”到了顶端（最右侧）。", 3000);
+                    await say("Now it is sorted and locked in place.", "现在它已经排好序并锁定了。", 2500);
+                    await say("We repeat this for the rest of the array.", "我们对剩余的数组重复这个过程。", 2500);
+                } else if (i === len - 2) {
+                    // Last step special message
+                    await say("Almost done...", "即将完成...", 1000);
+                }
+            }
+
+            // Mark the very first element as sorted (loop doesn't reach it naturally sometimes depending on implementation logic)
+            markSorted(0);
+
+            // Outro
+            titleCard.style.opacity = 1;
+            await say("The array is now perfectly sorted.", "数组现在已经完美排序。", 3000);
+            await say("This is the beauty of Bubble Sort.", "这就是冒泡排序之美。", 4000);
+            
+            // Loop or End? Let's just create a nice ending visual.
+            indicator.style.opacity = 0;
+            document.querySelectorAll('.bar').forEach(b => {
+                b.style.backgroundColor = 'var(--bar-sorted)';
+                b.style.transform = 'scale(1.1)';
+            });
+            await wait(500);
+            document.querySelectorAll('.bar').forEach(b => {
+                b.style.transform = 'scale(1)';
+            });
+            
+            await say("Replay in 5 seconds...", "5秒后重播...", 5000);
+            location.reload();
+        }
+
+
+        // --- Background Animation Code (Canvas) ---
+        function initBackground() {
+            const canvas = document.getElementById('canvas-bg');
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.5;
+                    this.vy = (Math.random() - 0.5) * 0.5;
+                    this.size = Math.random() * 20 + 5;
+                    this.color = `rgba(168, 218, 220, ${Math.random() * 0.2})`; // Light blue tint
+                }
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+                    if (this.x < 0) this.x = width;
+                    if (this.x > width) this.x = 0;
+                    if (this.y < 0) this.y = height;
+                    if (this.y > height) this.y = 0;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+            }
+
+            function initParticles() {
+                particles = [];
+                for (let i = 0; i < 30; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+            initParticles();
+            animate();
+        }
+
+        // --- Start ---
+        window.onload = () => {
+            initBackground();
+            init();
+            runBubbleSort();
+        };
+
+    </script>
+</body>
+</html>

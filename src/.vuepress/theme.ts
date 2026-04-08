@@ -139,6 +139,9 @@ export default hopeTheme({
     playground: {
       presets: ["ts", "vue"],
     },
+    math: {
+      type: "katex"
+    },
     revealjs: {
       plugins: ["highlight", "math", "search", "notes", "zoom"],
       themes: [

@@ -15,6 +15,17 @@ export default defineUserConfig({
       'link', // 定义图标链接
       { rel: 'icon', href: 'http://cdnblog.laikesxw.top/2025/裁剪.png' } // rel='icon' 设置图标，href 指向 public 文件夹下的图片
     ],
+    [
+      "script",
+      {},
+      `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MRHRSVP3');</script>
+<!-- End Google Tag Manager -->`
+    ],
     [ 
       "script",
       {},
@@ -26,16 +37,7 @@ export default defineUserConfig({
     })(window, document, "clarity", "script", "secidbe7fv");
       `
       
-    ],
-      [
-      "script",
-      {},
-      `
-      console.log("load js")
-
-      `
-
-      ]
+    ]
   ],
   base: "/",
   locales: {

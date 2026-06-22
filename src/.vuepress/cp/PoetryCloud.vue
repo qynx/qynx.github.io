@@ -237,10 +237,17 @@ const draw = () => {
     const wave = Math.sin(frame * 1.7 + point.phase) * (point.nodeType === "author" ? 3 : 7);
     const x = centerX + Math.cos(angle) * (point.orbit + wave) - Math.sin(angle) * point.side;
     const y = centerY + (Math.sin(angle) * (point.orbit + wave) + Math.cos(angle) * point.side) * 0.42;
-    point.screenX = x;
-    point.screenY = y;
-    point.renderX = x + driftX;
-    point.renderY = y + driftY;
+    point.baseX = x;
+    point.baseY = y;
+  });
+
+  const focus = getFocusLayout();
+  points.forEach((point) => {
+    const focused = getFocusedPosition(point, focus);
+    point.screenX = focused.x;
+    point.screenY = focused.y;
+    point.renderX = focused.x + driftX;
+    point.renderY = focused.y + driftY;
   });
 
   ctx.lineWidth = 0.5;
@@ -285,7 +292,7 @@ const draw = () => {
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(point.author, point.renderX, point.renderY - point.r * activeScale - 16);
-    } else if (selectedAuthorPoem) {
+    } else if (selectedAuthorPoem && shouldShowPoemLabel(point)) {
       ctx.shadowBlur = 0;
       ctx.fillStyle = "rgba(223, 231, 248, 0.82)";
       ctx.font = `14px ${classicalFont}`;
@@ -298,6 +305,57 @@ const draw = () => {
   drawBursts();
   ctx.shadowBlur = 0;
   animationId = window.requestAnimationFrame(draw);
+};
+
+const getFocusLayout = () => {
+  if (!selectedAuthor.value) return null;
+
+  const focusPoints = points.filter((item) => (item.nodeType === "author" && item.author === selectedAuthor.value) || (item.nodeType === "poem" && item.poem.author === selectedAuthor.value));
+  if (!focusPoints.length) return null;
+
+  const anchor = focusPoints.reduce(
+    (sum, item) => ({ x: sum.x + item.baseX, y: sum.y + item.baseY }),
+    { x: 0, y: 0 }
+  );
+  anchor.x /= focusPoints.length;
+  anchor.y /= focusPoints.length;
+
+  return {
+    anchor,
+    scale: getFocusScale(focusPoints.length - 1),
+  };
+};
+
+const getFocusedPosition = (point, focus) => {
+  const x = point.baseX;
+  const y = point.baseY;
+  if (!focus) return { x, y };
+
+  const isAuthor = point.nodeType === "author" && point.author === selectedAuthor.value;
+  const isPoem = point.nodeType === "poem" && point.poem.author === selectedAuthor.value;
+  if (!isAuthor && !isPoem) return { x, y };
+
+  return {
+    x: focus.anchor.x + (x - focus.anchor.x) * focus.scale,
+    y: focus.anchor.y + (y - focus.anchor.y) * focus.scale,
+  };
+};
+
+const getFocusScale = (poemCount) => {
+  if (poemCount <= 2) return 1.32;
+  if (poemCount <= 6) return 1.45;
+  if (poemCount <= 14) return 1.58;
+  return 1.72;
+};
+
+const shouldShowPoemLabel = (point) => {
+  if (!selectedAuthor.value || point.nodeType !== "poem") return false;
+
+  const related = points
+    .filter((item) => item.nodeType === "poem" && item.poem.author === selectedAuthor.value)
+    .sort((a, b) => (b.poem.star || 0) - (a.poem.star || 0) || a.poem.title.localeCompare(b.poem.title, "zh-CN"));
+  const limit = related.length <= 6 ? related.length : related.length <= 14 ? 8 : 10;
+  return related.slice(0, limit).some((item) => item.id === point.id);
 };
 
 const drawAuthorSelection = () => {

@@ -12,6 +12,7 @@ import naive from 'naive-ui'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 import GitCommitPanel from "./cp/GitCommitPanel.vue";
+import PoetryCloud from "./cp/PoetryCloud.vue";
 
 
 export default defineClientConfig({
@@ -23,5 +24,6 @@ export default defineClientConfig({
     app.component("sb-timeline", SbTimeline)
     app.component("monthly-chart", MonthlyChart)
     app.component("git-commit-panel", GitCommitPanel)
+    app.component("poetry-cloud", PoetryCloud)
   },
 });

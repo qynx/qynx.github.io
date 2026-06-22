@@ -1,4 +1,6 @@
 
+import { getPoetryCloudData } from "../utils/poetryCloud.js";
+
 // 塞入文章数据 全局变量
 export const getPostsPlugin = (options) => {
   return {
@@ -19,6 +21,10 @@ export const getPostsPlugin = (options) => {
       
       // 添加到 siteData
       app.siteData.posts = posts
+      app.writeTemp(
+        "poetryCloudData.js",
+        `export const poetryCloudData = ${JSON.stringify(getPoetryCloudData())};\n`
+      )
       return app
     }
   }

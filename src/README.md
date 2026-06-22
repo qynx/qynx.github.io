@@ -3,7 +3,7 @@ home: true
 layout: Blog
 icon: home
 bgImage: http://cdnblog.laikesxw.top/gongqing.jpg
-title: 持盈
+title: 桃符
 heroText: 人到洛阳花似锦 偏我来时不逢春
 heroFullScreen: true
 date: 2025-09-30
